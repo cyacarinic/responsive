@@ -1,0 +1,19 @@
+html, body {
+    background-color: blue;
+    height: 100%;
+    width: 100%;
+}
+
+.contenedor {
+    background-color: white;
+    height: 50%;
+    width: 50%;
+}
+
+.rectangulo {
+    background-color: red;
+    text-align: center;
+    width: 80%;
+    height: 50%;
+    margin-left: 10%;
+}

@@ -1,0 +1,68 @@
+body {
+  background-color: red;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+}
+
+.ad {
+  background-color: yellow;
+  display: none;
+}
+
+main {
+}
+
+.content {
+  background-color: white;
+  min-height: 400px;
+}
+
+footer {
+  background-color: #555;
+  clear: both;
+  padding: 20px;
+  text-align: center;
+}
+
+/***** RESPONSIVE ************/
+
+@media screen and (min-width: 480px) {
+
+  body {
+    background-color: orange;
+  }
+
+  .ad {
+    display: block;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+
+  body {
+    background-color: lime;
+  }
+
+  .ad {
+    width: 10%;
+    float: left;
+  }
+
+  .content {
+    width: 80%;
+    float: left;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+  body {
+    background-color: cyan;
+  }
+
+}

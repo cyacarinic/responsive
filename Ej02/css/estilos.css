@@ -1,0 +1,186 @@
+/* TRABAJAR ESTILOS DESDE MOVIL A DESKTOP (MENOR RESOLUCIÓN PRIMERO) */
+
+html, body {
+    height: 100%;   /* altura definida para los padres */
+}
+
+body {
+    background-color: beige;
+    margin: 0; /* quita el margen que pone el navegador por defecto */
+    -webkit-transition: all 2s; /* animaciones para Chrome y Safari */
+    -moz-transition: all 2s; /* animaciones para Mozilla */
+}
+
+header {
+    position: fixed;    /* para que aparezca sobre todos los elementos */
+    top:0;              /* posición superior */
+    width: 100%;
+}
+
+header h1 {
+    margin-top: 0px;
+}
+
+.header, .header-inner {
+    background-color: #ffc820;
+    text-align: center;
+    width: 100%;
+    opacity: 0.9;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+
+.social-icons a {
+    text-decoration: none;
+}
+
+.scrolling {
+    font-size: 12px;
+    position: fixed;
+    top:0;
+    -webkit-transition: all 0.5s; /* animaciones para Chrome y Safari */
+    -moz-transition: all 0.5s;
+}
+
+.scrolling .social-icons {
+    display: none;
+    -webkit-transition: all 0.5s; /* animaciones para Chrome y Safari */
+    -moz-transition: all 0.5s;
+}
+
+.vertical-ad {
+    background-color: white;
+    display: none; /* por defecto no se muestran los ads */
+    margin-bottom: 10px;    /* margen inferior */
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+}
+
+.horizontal-ad {
+    display: none;
+    height: 70px;
+    margin-left: 5%;
+    margin-right: 5%;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+}
+
+.horizontal-izq, .horizontal-der {
+    background-color: white;
+    margin-bottom: 10px;    /* margen inferior */
+    width: 200px;
+    height: 70px;
+    _float: left;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+}
+
+.horizontal-izq {
+    float: left;
+}
+
+.horizontal-der {
+    float: right;
+}
+
+.vertical-ad:hover, .horizontal-izq:hover, .horizontal-der:hover {
+    background-color: #ffc820;
+}
+
+main {
+    _background-color: red;
+    min-height: -webkit-calc(100% - 115px); /* altura mínima del contenido central*/
+    min-height: -moz-calc(100% - 115px);
+}
+
+.margen {
+    _background-color: blue;
+    height: 76px;
+}
+
+.central {
+    background-color: antiquewhite;
+    min-height: 463px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: cadetblue;
+    text-align: center;
+    padding: 20px;  /* espacio entre el contenido y borde (relleno) */
+    clear: both;  /* antidoto del float */
+}
+
+/********************************* RESPONSIVE ***************************************************/
+
+@media screen and (min-width: 480px){   /* media query para ancho minimo de 480 */
+    /* Resolución mínima de celulares landscape */
+    body {
+        background-color: burlywood;
+    }
+
+    .margen {
+        height: 90px;
+    }
+
+    .central {
+        min-height: 379px;  /* se achica un poco la altura para que entren los ads*/
+    }
+    
+    .horizontal-ad {
+        display: block; /* se muestran los ads */
+        alignment: center;
+    }
+}
+
+@media screen and (min-width: 720px){
+    /* Resolución mínima de tablets */
+    body {
+        background-color: #b89869;
+    }
+
+    main {
+        min-height: -webkit-calc(100% - 68px);
+        min-height: -moz-calc(100% - 68px);
+        margin-bottom: 10px;
+    }
+
+    .horizontal-ad {
+        display: none;
+    }
+
+    .vertical-ad {
+        display: block;
+        float: left;    /* se vuelve flotante para que sean colineales */
+        width: 120px;
+        min-height: 470px;
+        height: 100%;
+        max-height: 470px;
+    }
+
+    .central {
+        float: left;
+        margin-left: 15px;
+        margin-right: 15px;
+        width: -webkit-calc(100% - 270px);
+        width: -moz-calc(100% - 270px);
+        min-height: 471px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    /* Resolución mínima de desktops */
+    body {
+        background-color: #9e142a;
+    }
+
+    main {
+        min-height: -webkit-calc(100% - 68px);
+        min-height: -moz-calc(100% - 68px);
+        margin-bottom: 10px;
+    }
+
+    .ad {
+        height: 100%;
+    }
+}
