@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sidr Test</title>
+    <link rel="stylesheet" href="css/jquery.sidr.poder.css">
+</head>
+
+<body>
+    <h1>Sidr Test</h1>
+    <a class="menu" href="#">Menu</a>
+    <div id="menuslider" style="display:none;">
+        <ul>
+            <li><a href="/">Portada</a></li>
+            <li><a href="/noticias/">Noticias</a></li>
+            <li><a href="/analisis/">Análisis</a></li>
+            <li><a href="/investigaciones/">Investigaciones</a></li>
+            <li><a href="/informes-especiales/">Informes especiales</a></li>
+            <li><a href="/perfiles-empresariales/">Perfiles empresariales</a></li>
+            <li><a href="/catalogo">Suscripción</a></li>
+            <li><a href="/rss">RSS</a></li>
+        </ul>
+    </div>
+    <!-- #slider -->
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/jquery.sidr.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('a.menu').sidr({
+            name: 'menuslider',
+            displace: false,
+            onOpen: function() {
+                // for autoCloseMenuSliders
+                $('#menuslider').data('visible', true);
+            },
+            onClose: function() {
+                // for autoCloseMenuSliders
+                $('#menuslider').data('visible', false);
+            }
+        });
+
+        // close menuslider if it is opened
+        function autoCloseMenuSliders() {
+            if ($('#menuslider').data('visible') === true) {
+                if (!$(event.target).closest('#menuslider').length) {
+                    $.sidr('close', 'menuslider');
+                }
+            }
+            if ($('#menuslider-user').data('visible') === true) {
+                if (!$(event.target).closest('#menuslider-user').length) {
+                    $.sidr('close', 'menuslider-user');
+                }
+            }
+        }
+
+        // if page is clicked
+        $('html').click(function(event) {
+            autoCloseMenuSliders();
+        });
+
+        // if ESC key is pressed
+        $(document).on('keyup', function(e) {
+            if (e.keyCode == 27) {
+                autoCloseMenuSliders();
+            }
+        });
+
+    });
+    </script>
+</body>
+
+</html>

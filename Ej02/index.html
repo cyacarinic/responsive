@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/estilos.css"/>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/funciones.js"></script>
+    <!--link rel="stylesheet" href="css/sidr/jquery.sidr.claudio.css"-->
+    <!--script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script-->
 </head>
 <body>
 
@@ -15,7 +15,7 @@
     <div class="header">
         <div class="header-inner">
             <div class="icono-menu">
-                <a href="#menuslider"><img src="img/menu-icon.png" alt=""/></a>
+                <a class="menu"><img src="img/menu-icon.png" alt=""/></a>
             </div>
             <div class="titulo">
                 <h1>Web Responsive!</h1>
@@ -27,7 +27,7 @@
             </div>
         </div>
 
-        <div id="menuslider" class="menuslider">
+        <div id="menuslider" class="menuslider" style="display:none;">
             <ul>
                 <li><a href="#">Portada</a></li>
                 <li><a href="#">{{ section.name }}</a></li>
@@ -156,7 +156,6 @@
         ipsum libero maiores maxime nihil, nulla placeat praesentium quibusdam saepe sapiente velit veniam voluptate!
         Dignissimos.-->
         <p>Algo por aca</p>
-
     </div>
     <div class="vertical-ad">
         <a target="_blank" href="https://google.com"><img src="img/ad.gif"/></a></div>
@@ -165,6 +164,10 @@
 <footer>
     Pie de Página
 </footer>
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.sidr.min.js"></script>
+<script src="js/funciones.js"></script>
 
 </body>
 </html>

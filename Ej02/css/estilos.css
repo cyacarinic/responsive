@@ -71,6 +71,11 @@ header h1 {
     _display: none;
 }
 
+.sidr.left {
+    left: -260px;
+    right: auto
+}
+
 .menuslider a {
     color: white;
     font-family: Helvetica;
@@ -90,7 +95,7 @@ header h1 {
 
 .menuslider li:hover {
     background-color: #9e142a;
-    -webkit-transition: all 0.2s; /* animaciones para Chrome y Safari */
+    -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
 }
 
