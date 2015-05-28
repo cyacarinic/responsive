@@ -7,7 +7,7 @@
 
 (function($) {
     // Controla que el header se mantenga en el tope
-    var topTrigger = 100;
+    var topTrigger = 30;
     $(window).on('scroll', function() {
         var y = window.pageYOffset;
         if(y >= topTrigger) {
