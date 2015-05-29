@@ -25,18 +25,19 @@ header h1 {
     float: left;
     position: fixed;
     top: 0;
-    _border: dashed;
-    padding: 10px;
-}
-
-.icono-menu img, .icono-menu a {
-    width: 25px;
-    height: 25px;
 }
 
 .icono-menu a {
+    width: 25px;
+    height: 25px;
     display: block;
     padding: 8px;
+}
+
+.icono-menu img {
+    width: 25px;
+    height: 25px;
+    display: block;
 }
 
 .header-inner {
@@ -50,8 +51,8 @@ header h1 {
 
 .social-icons a {
     text-decoration: none;
-    padding-left: 9%;
-    padding-right: 9%;
+    padding-left: 7%;
+    padding-right: 7%;
 }
 
 .scrolling {
