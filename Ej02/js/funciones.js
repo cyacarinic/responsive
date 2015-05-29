@@ -1,10 +1,3 @@
-/*$(window).scroll(function(){
-    $('#header-inner').toggleClass(
-        'scrolling',
-        $(window).scrollTop() > $('#header').offset().top
-    );
-});*/
-
 (function($) {
     // Controla que el header se mantenga en el tope
     var topTrigger = 30;
@@ -34,12 +27,12 @@
 
     // close menuslider if it is opened
     function autoCloseMenuSliders() {
-        if ($('#menuslider').data('visible') == true) {
+        if ($('#menuslider').data('visible') === true) {
             if(!$(event.target).closest('#menuslider').length) {
                 $.sidr('close', 'menuslider');
             }
         }
-        if ($('#menuslider-user').data('visible') == true) {
+        if ($('#menuslider-user').data('visible') === true) {
             if(!$(event.target).closest('#menuslider-user').length) {
                 $.sidr('close', 'menuslider-user');
             }
@@ -49,7 +42,7 @@
     // if page is clicked
     $('html').click(function(event) {
         autoCloseMenuSliders();
-    })
+    });
 
     // if ESC key is pressed
     $(document).on('keyup', function(e) {
@@ -57,5 +50,18 @@
             autoCloseMenuSliders();
         }
     });
+
+    // Cambiar slider del index
+    var roles = ['Lorem ipsum dolor sit amet, consectetur adipisicing elit.' ,
+        'Accusantium aliquam, amet aspernatur consectetur doloremque esse, ex explicabo inventore.',
+        'Iusto nemo obcaecati perferendis quia quisquam quod sed. Dolor excepturi nesciunt saepe!'];
+    var counter = 0;
+    var $contenido = $('.contenido-index');
+    setInterval(function(){
+        $contenido.text(roles[counter++]);
+        if(counter >= roles.length){
+            counter = 0;
+        }
+    }, 2000);
 
 })(jQuery);

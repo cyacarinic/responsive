@@ -21,6 +21,11 @@ header h1 {
     margin-top: 0px;
 }
 
+header .titulo a{
+    text-decoration: none;
+    color: black;
+}
+
 .icono-menu {
     float: left;
     position: fixed;
@@ -166,13 +171,18 @@ main {
     font-size: 2.15em;
     font-family: 'Arial';
     font-weight: bold;
-    padding: 20px;
+    padding: 20px;    
 }
 
 .divisor {
     margin-bottom: 20px;
     border-bottom: 1px solid;
     border-color: gray;
+}
+
+.contenido-index {
+    background-color: white;
+    min-height: 380px;
 }
 
 footer {
@@ -197,7 +207,7 @@ footer {
     .central {
         min-height: 385px;  /* se achica un poco la altura para que entren los ads*/
     }
-
+    
     .horizontal-ad {
         display: block; /* se muestran los ads */
         alignment: center;
