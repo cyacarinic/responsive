@@ -148,17 +148,31 @@ header h1 {
 }
 
 main {
-    _background-color: red;
     min-height: -webkit-calc(100% - 115px); /* altura mínima del contenido central*/
     min-height: -moz-calc(100% - 115px);
 }
 
 .central {
     background-color: antiquewhite;
-    min-height: 463px;
+    min-height: 469px;
     margin-bottom: 10px;
     padding-right: 10px;
     padding-left: 10px;
+}
+
+.titulo-seccion {
+    text-transform: uppercase;
+    color: rgb(191,146,69);
+    font-size: 2.15em;
+    font-family: 'Arial';
+    font-weight: bold;
+    padding: 20px;
+}
+
+.divisor {
+    margin-bottom: 20px;
+    border-bottom: 1px solid;
+    border-color: gray;
 }
 
 footer {
@@ -181,9 +195,9 @@ footer {
     }
 
     .central {
-        min-height: 379px;  /* se achica un poco la altura para que entren los ads*/
+        min-height: 385px;  /* se achica un poco la altura para que entren los ads*/
     }
-    
+
     .horizontal-ad {
         display: block; /* se muestran los ads */
         alignment: center;
