@@ -29,17 +29,14 @@ header h1 {
     padding: 10px;
 }
 
-.icono-menu img, a {
+.icono-menu img, .icono-menu a {
     width: 25px;
     height: 25px;
 }
 
-.icono-menu img {
-    _border: double;
-}
-
 .icono-menu a {
-    _border: dotted;
+    display: block;
+    padding: 8px;
 }
 
 .header-inner {
@@ -53,7 +50,8 @@ header h1 {
 
 .social-icons a {
     text-decoration: none;
-    padding: 35px;
+    padding-left: 9%;
+    padding-right: 9%;
 }
 
 .scrolling {
@@ -77,7 +75,6 @@ header h1 {
     position: fixed;
     top:0;
     overflow: scroll;
-    _display: none;
 }
 
 .sidr.left {
@@ -89,17 +86,14 @@ header h1 {
     color: white;
     font-family: Helvetica;
     text-decoration: none;
+    display: block;
+    padding: 15px;
 }
 
 .menuslider ul {
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-.menuslider li {
-    _height: 50px;
-    padding: 15px;
 }
 
 .menuslider li:hover {
@@ -162,6 +156,8 @@ main {
     background-color: antiquewhite;
     min-height: 463px;
     margin-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 footer {
@@ -222,8 +218,8 @@ footer {
         float: left;
         margin-left: 15px;
         margin-right: 15px;
-        width: -webkit-calc(100% - 270px);
-        width: -moz-calc(100% - 270px);
+        width: -webkit-calc(100% - 290px);
+        width: -moz-calc(100% - 290px);
         min-height: 471px;
     }
 }
